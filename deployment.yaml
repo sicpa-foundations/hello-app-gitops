@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-api-app
+  template:
+    metadata:
+      labels:
+        app: hello-api-app
+    spec:
+      containers:
+      - name: hello-api-server
+        image: ghcr.io/sicpa-foundations/hello-api:test
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: ghcr-sicpa-foundations
