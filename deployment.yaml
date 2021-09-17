@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hello-api-server
-        image: ghcr.io/sicpa-foundations/hello-api:fbd3653
+        image: ghcr.io/sicpa-foundations/hello-api:ec08f3c
         ports:
         - containerPort: 8080
       imagePullSecrets:
