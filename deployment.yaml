@@ -7,16 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-api-app
+      app: hello-app
   template:
     metadata:
       labels:
-        app: hello-api-app
+        app: hello-app
     spec:
       containers:
-      - name: hello-api-server
-        image: ghcr.io/sicpa-foundations/hello-api:f12c8d7
+      - name: hello-server
+        image: ghcr.io/sicpa-foundations/hello-app:f12c8d7
         ports:
         - containerPort: 8080
-      imagePullSecrets:
-      - name: ghcr-sicpa-foundations
