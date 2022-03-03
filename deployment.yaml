@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: hello-server
-        image: ghcr.io/sicpa-foundations/hello-app:bdd576c
+        image: ghcr.io/sicpa-foundations/hello-app:ab40623
         ports:
         - containerPort: 8080
