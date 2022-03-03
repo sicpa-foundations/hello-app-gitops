@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-deployment
+  name: hello-app
 spec:
   replicas: 1
   selector:
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: hello-server
-        image: ghcr.io/sicpa-foundations/hello-app:bdd576c
+        image: ghcr.io/sicpa-foundations/hello-app:790c980
         ports:
         - containerPort: 8080
